@@ -1,0 +1,17 @@
+[Unit]
+Description=Ollama Linux Master Dashboard Service
+After=network.target ollama.service
+
+[Service]
+Type=simple
+User=computer
+WorkingDirectory=/home/computer/ollama/dashboard
+
+# [최종 교정] 실제 logenv 가 숨어있던 완전 무결한 폴더 내부 주소로 정밀 조준 완료
+ExecStart=/home/computer/ollama/dashboard/logenv/bin/streamlit run /home/computer/ollama/dashboard/app.py --server.port 9999 --server.address 0.0.0.0 --server.headless true
+
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
