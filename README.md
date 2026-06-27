@@ -50,6 +50,9 @@ sudo apt install -y python3 python3-pip python3-venv net-tools
 제공된 `install.sh` 스크립트에 런타임 실행 권한을 바인딩하고 가상 환경 설치 파이프라인을 기동합니다.
 
 ```bash
+git clone https://github.com/jasonkim-77/ollma-dashboard-ubuntu
+cd ollama-dashboard-ubuntu
+
 chmod +x install.sh
 ./install.sh
 ```
