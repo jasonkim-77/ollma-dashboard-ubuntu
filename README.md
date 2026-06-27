@@ -48,6 +48,7 @@ sudo apt install -y python3 python3-pip python3-venv net-tools
 
 ### 2. 자동 빌드 및 배포 스크립트 실행
 제공된 `install.sh` 스크립트에 런타임 실행 권한을 바인딩하고 가상 환경 설치 파이프라인을 기동합니다.
+서비스 파일의 내용을 설치되는 시스템에 맞게끔 수정한다.
 
 ```bash
 git clone https://github.com/jasonkim-77/ollma-dashboard-ubuntu
